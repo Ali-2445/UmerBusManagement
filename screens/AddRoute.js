@@ -24,6 +24,10 @@ const AddRouteScreen = () => {
 
   const handleAddRoute = () => {
     // Add the new route and stops to the "Routes" collection in Firestore
+    if (!route || stops.length == 0) {
+      alert('Enter complete details');
+      return;
+    }
     firestore()
       .collection('Routes')
       .add({

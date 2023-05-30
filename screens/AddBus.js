@@ -33,6 +33,10 @@ const AddBusScreen = ({navigation}) => {
   }, []);
 
   const handleAddBus = () => {
+    if (!busNumber || !driverName || !driverPhone || !selectedRoute) {
+      alert('Enter complete info');
+      return;
+    }
     // Add the new bus to the "Buses" collection in Firestore
     firestore()
       .collection('Buses')

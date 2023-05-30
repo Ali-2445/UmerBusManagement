@@ -27,6 +27,7 @@ const BusListScreen = () => {
           busData.push({id: doc.id, ...bus});
         });
         setBuses(busData);
+        console.log(busData);
       });
 
     // Clean up the subscription
@@ -82,38 +83,42 @@ const BusListScreen = () => {
   return (
     <ScrollView contentContainerStyle={styles.container}>
       <Text style={styles.title}>Bus List</Text>
-      {buses.map(bus => (
-        <View key={bus.id} style={styles.card}>
-          <Text style={styles.busNumber}>{bus.busNumber}</Text>
-          <View style={styles.qrCodeContainer}>
-            <ViewShot ref={qrCodeRef} options={{format: 'png', quality: 1}}>
-              <QRCode value={bus.busNumber} size={120} ref={qrCodeRef} />
-            </ViewShot>
-          </View>
-          <Text style={styles.driverName}>Driver Name: {bus.driverName}</Text>
-          <Text style={styles.driverPhone}>
-            Driver Phone: {bus.driverPhone}
-          </Text>
-          <Text style={styles.route}>Route: {bus.route}</Text>
-          <View style={styles.buttonContainer}>
-            <TouchableOpacity
-              style={styles.editButton}
-              onPress={() => handleEdit(bus)}>
-              <Text style={styles.buttonText}>Edit</Text>
-            </TouchableOpacity>
-            <TouchableOpacity
-              style={styles.shareButton}
-              onPress={() => handleShare(bus.busNumber)}>
-              <Text style={styles.buttonText}>Share</Text>
-            </TouchableOpacity>
-            <TouchableOpacity
-              style={styles.deleteButton}
-              onPress={() => handleDelete(bus.id)}>
-              <Text style={styles.buttonText}>Delete</Text>
-            </TouchableOpacity>
-          </View>
-        </View>
-      ))}
+      {buses.length > 0
+        ? buses.map(bus => (
+            <View key={bus.id} style={styles.card}>
+              <Text style={styles.busNumber}>{bus.busNumber}</Text>
+              <View style={styles.qrCodeContainer}>
+                <ViewShot ref={qrCodeRef} options={{format: 'png', quality: 1}}>
+                  <QRCode value={bus.busNumber} size={120} ref={qrCodeRef} />
+                </ViewShot>
+              </View>
+              <Text style={styles.driverName}>
+                Driver Name: {bus.driverName}
+              </Text>
+              <Text style={styles.driverPhone}>
+                Driver Phone: {bus.driverPhone}
+              </Text>
+              <Text style={styles.route}>Route: {bus.route}</Text>
+              <View style={styles.buttonContainer}>
+                <TouchableOpacity
+                  style={styles.editButton}
+                  onPress={() => handleEdit(bus)}>
+                  <Text style={styles.buttonText}>Edit</Text>
+                </TouchableOpacity>
+                <TouchableOpacity
+                  style={styles.shareButton}
+                  onPress={() => handleShare(bus.busNumber)}>
+                  <Text style={styles.buttonText}>Share</Text>
+                </TouchableOpacity>
+                <TouchableOpacity
+                  style={styles.deleteButton}
+                  onPress={() => handleDelete(bus.id)}>
+                  <Text style={styles.buttonText}>Delete</Text>
+                </TouchableOpacity>
+              </View>
+            </View>
+          ))
+        : null}
     </ScrollView>
   );
 };
