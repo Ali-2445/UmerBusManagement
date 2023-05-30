@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "764112604078",
+    "project_id": "bus-management-5e702",
+    "storage_bucket": "bus-management-5e702.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:764112604078:android:d5e4cfcca1180fc81e163f",
+        "android_client_info": {
+          "package_name": "com.busmanagement"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "764112604078-5p3vp42uhc675csh70vmeihc2kphs68c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC6SwbwdxgbP1jnFBOOxc9TI3EPzbwvDEo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "764112604078-5p3vp42uhc675csh70vmeihc2kphs68c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
