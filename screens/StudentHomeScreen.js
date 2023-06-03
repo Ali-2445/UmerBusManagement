@@ -33,7 +33,7 @@ const QRScannerScreen = ({navigation}) => {
 
   const handleScan = async ({data}) => {
     try {
-      const [busNumber] = data.split(' ');
+      const busNumber = data;
 
       const querySnapshot = await firestore()
         .collection('AssignedBuses')
@@ -42,12 +42,13 @@ const QRScannerScreen = ({navigation}) => {
         .get();
 
       if (!querySnapshot.empty) {
-        ToastAndroid.show('This is your assigned bus', ToastAndroid.SHORT);
+        alert('This bus is assigned to you');
+
+        return;
       } else {
-        ToastAndroid.show(
-          'This bus is not assigned to you',
-          ToastAndroid.SHORT,
-        );
+        alert('This bus is not assigned to you');
+
+        return;
       }
     } catch (error) {
       console.log('Error querying assigned buses:', error);
@@ -79,7 +80,12 @@ const QRScannerScreen = ({navigation}) => {
       <Text style={styles.userName}>
         {user ? `Welcome, ${user.name}` : 'Loading user...'}
       </Text>
-      <QRCodeScanner onRead={handleScan} />
+      <QRCodeScanner
+        onRead={handleScan}
+        reactivateTimeout={1000}
+        reactivate={true}
+        showMarker
+      />
       <Text style={styles.instructions}>
         Scan a bus QR code to check if it is assigned to you
       </Text>
@@ -97,6 +103,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: 'bold',
     marginBottom: 16,
+    color: 'black',
   },
   instructions: {
     fontSize: 16,

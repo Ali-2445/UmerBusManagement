@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "764112604078",
-    "project_id": "bus-management-5e702",
-    "storage_bucket": "bus-management-5e702.appspot.com"
+    "project_number": "221105662644",
+    "project_id": "busmanagement-7761e",
+    "storage_bucket": "busmanagement-7761e.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:764112604078:android:d5e4cfcca1180fc81e163f",
+        "mobilesdk_app_id": "1:221105662644:android:1f1daaec7530238f24c5e1",
         "android_client_info": {
           "package_name": "com.busmanagement"
         }
       },
       "oauth_client": [
         {
-          "client_id": "764112604078-5p3vp42uhc675csh70vmeihc2kphs68c.apps.googleusercontent.com",
+          "client_id": "221105662644-juscdffai47gfjkhd4k6jblfrgvljllf.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyC6SwbwdxgbP1jnFBOOxc9TI3EPzbwvDEo"
+          "current_key": "AIzaSyCviOI--Jer3AfHHfIz7mpCGHy_mGlYs5s"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "764112604078-5p3vp42uhc675csh70vmeihc2kphs68c.apps.googleusercontent.com",
+              "client_id": "221105662644-juscdffai47gfjkhd4k6jblfrgvljllf.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

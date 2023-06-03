@@ -1,9 +1,7 @@
 export const firebaseConfig = {
-  apiKey: 'AIzaSyC6SwbwdxgbP1jnFBOOxc9TI3EPzbwvDEo',
-  authDomain: 'bus-management-5e702.firebaseapp.com',
-  //   databaseURL: FIREBASE_DATABASE_URL,
-  projectId: 'bus-management-5e702',
-  storageBucket: 'bus-management-5e702.appspot.com',
-  appId: '1:764112604078:android:d5e4cfcca1180fc81e163f',
-  //   measurementId: FIREBASE_MEASUREMENT_ID,
+  apiKey: 'AIzaSyB9ltjv13FUvms3kHkdhXalSgRc0RAokS8',
+  authDomain: 'busmanagement-7761e.firebaseapp.com',
+  projectId: 'busmanagement-7761e',
+  storageBucket: 'busmanagement-7761e.appspot.com',
+  appId: '1:221105662644:android:1f1daaec7530238f24c5e1',
 };

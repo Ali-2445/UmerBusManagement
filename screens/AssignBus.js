@@ -248,6 +248,7 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: 'bold',
     marginBottom: 20,
+    color: 'black',
   },
   dropdownContainer: {
     height: 40,

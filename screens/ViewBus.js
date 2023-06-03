@@ -131,6 +131,7 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: 'bold',
     marginBottom: 20,
+    color: 'black',
   },
   card: {
     backgroundColor: '#fff',
@@ -150,6 +151,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: 'bold',
     marginBottom: 8,
+    color: 'black',
   },
   qrCodeContainer: {
     alignItems: 'center',
@@ -158,14 +160,17 @@ const styles = StyleSheet.create({
   driverName: {
     fontSize: 16,
     marginBottom: 4,
+    color: 'black',
   },
   driverPhone: {
     fontSize: 16,
     marginBottom: 4,
+    color: 'black',
   },
   route: {
     fontSize: 16,
     marginBottom: 12,
+    color: 'black',
   },
   buttonContainer: {
     flexDirection: 'row',
